@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { ScenarioObject, TopSelling, TableRows, Employee } from './scenarios-data';
-
-
+import { ScenarioObject, StatusCollection, TopScenarios, StatusList } from './scenarios-data';
 @Component({
     selector: 'app-scenarios',
     templateUrl: 'scenarios.component.html'
@@ -9,8 +7,10 @@ import { ScenarioObject, TopSelling, TableRows, Employee } from './scenarios-dat
 
 export class ScenariosComponent {
   topScenarios: ScenarioObject[];
+  statusList: StatusCollection;
 
   constructor() { 
-    this.topScenarios = TopSelling;
+    this.topScenarios = TopScenarios;
+    this.statusList = StatusList;
   }
 }

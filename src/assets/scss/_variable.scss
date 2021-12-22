@@ -77,6 +77,8 @@ $green: #06d79c !default;
 $teal: #20c997 !default;
 $cyan: #4fc3f7 !default;
 $primary: #7460ee !default;
+$secondary: #888ea2 !default;
+$disabled: #c4c7d1 !default;
 $text-muted: $gray-500 !default;
 $megna: #01c0c8 !default;
 
@@ -103,8 +105,9 @@ $colors: (
   "gray-dark": $gray-800,
 );
 
-$primary: $primary!default;
-$secondary: $gray-600 !default;
+$primary: $primary !default;
+$secondary: $secondary !default;
+$disabled: $disabled !default;
 $success: $green !default;
 $info: $blue !default;
 $warning: $yellow !default;
@@ -120,6 +123,7 @@ $theme-colors: map-merge(
   (
     "primary": $primary,
     "secondary": $secondary,
+    "disabled": $disabled,
     "success": $success,
     "info": $info,
     "warning": $warning,
@@ -163,7 +167,7 @@ $body-color: #67757c !default;
 // 
 // Typography
 // 
-$font-size-base: 1rem;
+$font-size-base: 0.75rem;
 $font-family-sans-serif: "Montserrat", sans-serif !default;
 
 $font-weight-light: 300 !default;
@@ -178,7 +182,6 @@ $h3-font-size: 21px !default;
 $h4-font-size: 18px !default;
 $h5-font-size: 16px !default;
 $h6-font-size: 14px !default;
-
 
 $headings-margin-bottom: 8px !default;
 $headings-font-weight: 400 !default;

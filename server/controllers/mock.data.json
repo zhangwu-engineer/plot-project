@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "date": "08/Dec/2020",
+      "coveragePeriod": "08/Dec/2020 - 31/Oct/2021",
+      "scenarioName": "MRF 10 v37",
+      "status": "optimized",
+      "comments": ""
+    },
+    {
+      "date": "08/Dec/2020",
+      "coveragePeriod": "08/Dec/2020 - 31/Oct/2021",
+      "scenarioName": "MRF 10 v36",
+      "status": "not_optimized",
+      "comments": ""
+    },
+    {
+      "date": "08/Dec/2020",
+      "coveragePeriod": "08/Dec/2020 - 31/Oct/2021",
+      "scenarioName": "MRF 10 v36",
+      "status": "optimized",
+      "comments": ""
+    },
+    {
+      "date": "08/Dec/2020",
+      "coveragePeriod": "08/Dec/2020 - 31/Oct/2021",
+      "scenarioName": "MRF 10 v37",
+      "status": "optimized",
+      "comments": ""
+    },
+    {
+      "date": "08/Dec/2020",
+      "coveragePeriod": "08/Dec/2020 - 31/Oct/2021",
+      "scenarioName": "MRF 12 v4311",
+      "status": "not_optimized",
+      "comments": ""
+    },
+    {
+      "date": "08/Dec/2020",
+      "coveragePeriod": "08/Dec/2020 - 31/Oct/2021",
+      "scenarioName": "MRF 12 v439",
+      "status": "optimized",
+      "comments": ""
+    },
+    {
+      "date": "08/Dec/2020",
+      "coveragePeriod": "08/Dec/2020 - 31/Oct/2021",
+      "scenarioName": "MRF 12 v436",
+      "status": "not_optimized",
+      "comments": ""
+    },
+    {
+      "date": "08/Dec/2020",
+      "coveragePeriod": "08/Dec/2020 - 31/Oct/2021",
+      "scenarioName": "MRF 437",
+      "status": "not_optimized",
+      "comments": ""
+    }
+  ]
+}

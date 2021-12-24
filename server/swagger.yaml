@@ -1,0 +1,62 @@
+swagger: "2.0"
+info:
+  description: "This is a testing server for the Plot project"
+  version: "1.0.0"
+  title: "Swagger Plot project"
+host: "localhost:4000"
+basePath: "/api"
+schemes:
+- "http"
+- "https"
+paths:
+  /scenarios:
+    get:
+      tags:
+      - "scenario"
+      summary: "Get scenarios"
+      description: "Get the list of scenarios"
+      operationId: "getScenarios"
+      produces:
+      - "application/json"
+      parameters:
+      responses:
+        "200":
+          description: "Successful operation"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/scenario"
+        "500":
+          description: "Internal error"
+        "403":
+          description: "Forbidden"
+        "422":
+          description: "Unprocessable Entity"
+        "503":
+          description: "Service Unavailable"
+        "400":
+          description: "BadRequest"
+definitions:
+  scenario:
+    type: "object"
+    required:
+    properties:
+      id:
+        type: "string"
+      name:
+        type: "string"
+        example: "MRF"
+      date:
+        type: "string"
+      coveragePeriod:
+        type: "string"
+      comments:
+        type: "string"
+      status:
+        type: "string"
+        description: "scenario status"
+        enum:
+        - "optimized"
+        - "not_optimized"
+    xml:
+      name: "scenario"

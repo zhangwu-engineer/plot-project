@@ -1,10 +1,13 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import swaggerUi from 'swagger-ui-express';
+import YAML from 'yamljs';
 import config from './config';
 
 import ScenarioController from './controllers/index.js';
 
 const PORT = config.port;
+const swaggerDocument = YAML.load('./swagger.yaml');
 
 const app = express();
 app.use(bodyParser.json());
@@ -18,6 +21,7 @@ app.use((req, res, next) => {
 });
 
 app.use('/api/scenarios', ScenarioController);
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 const server = app.listen(PORT, () => {
     console.log('listening on port %s...', server.address().port);

@@ -2,7 +2,8 @@
   {
     "id": "00001",
     "date": "08/Dec/2020",
-    "coveragePeriod": "08/Dec/2020 - 31/Oct/2021",
+    "coverageStartDate": "08/Dec/2020",
+    "coverageEndDate": "31/Oct/2021",
     "name": "MRF 10 v37",
     "status": "optimized",
     "comments": ""
@@ -10,7 +11,8 @@
   {
     "id": "00002",
     "date": "08/Dec/2020",
-    "coveragePeriod": "08/Dec/2020 - 31/Oct/2021",
+    "coverageStartDate": "08/Dec/2020",
+    "coverageEndDate": "31/Oct/2021",
     "name": "MRF 10 v36",
     "status": "not_optimized",
     "comments": ""
@@ -18,7 +20,8 @@
   {
     "id": "00003",
     "date": "08/Dec/2020",
-    "coveragePeriod": "08/Dec/2020 - 31/Oct/2021",
+    "coverageStartDate": "08/Dec/2020",
+    "coverageEndDate": "31/Oct/2021",
     "name": "MRF 10 v36",
     "status": "optimized",
     "comments": ""
@@ -26,7 +29,8 @@
   {
     "id": "00004",
     "date": "08/Dec/2020",
-    "coveragePeriod": "08/Dec/2020 - 31/Oct/2021",
+    "coverageStartDate": "08/Dec/2020",
+    "coverageEndDate": "31/Oct/2021",
     "name": "MRF 10 v37",
     "status": "optimized",
     "comments": ""
@@ -34,7 +38,8 @@
   {
     "id": "00005",
     "date": "08/Dec/2020",
-    "coveragePeriod": "08/Dec/2020 - 31/Oct/2021",
+    "coverageStartDate": "08/Dec/2020",
+    "coverageEndDate": "31/Oct/2021",
     "name": "MRF 12 v4311",
     "status": "not_optimized",
     "comments": ""
@@ -42,7 +47,8 @@
   {
     "id": "00006",
     "date": "08/Dec/2020",
-    "coveragePeriod": "08/Dec/2020 - 31/Oct/2021",
+    "coverageStartDate": "08/Dec/2020",
+    "coverageEndDate": "31/Oct/2021",
     "name": "MRF 12 v439",
     "status": "optimized",
     "comments": ""
@@ -50,7 +56,8 @@
   {
     "id": "00007",
     "date": "08/Dec/2020",
-    "coveragePeriod": "08/Dec/2020 - 31/Oct/2021",
+    "coverageStartDate": "08/Dec/2020",
+    "coverageEndDate": "31/Oct/2021",
     "name": "MRF 12 v436",
     "status": "not_optimized",
     "comments": ""
@@ -58,7 +65,8 @@
   {
     "id": "00008",
     "date": "08/Dec/2020",
-    "coveragePeriod": "08/Dec/2020 - 31/Oct/2021",
+    "coverageStartDate": "08/Dec/2020",
+    "coverageEndDate": "31/Oct/2021",
     "name": "MRF 437",
     "status": "not_optimized",
     "comments": ""

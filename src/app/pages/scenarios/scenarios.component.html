@@ -15,8 +15,12 @@
         </div>
       </div>
       <div class="card-body border-top">
-        <div class="table-responsive">
-          <table class="table align-middle text-nowrap">
+        <div class="w-100 text-center" *ngIf="this.scenarioService.isLoading">
+            <div class="spinner-border text-primary align-items-center" role="status">
+            </div>
+        </div>
+        <div class="table-responsive" *ngIf="!this.scenarioService.isLoading">
+            <table class="table align-middle text-nowrap">
               <thead class="thead-dark">
                   <tr>
                       <th class="text-dark font-medium fs-4">Date</th>
@@ -29,10 +33,10 @@
                   </tr>
               </thead>
               <tbody>
-                  <tr *ngFor='let ts of topScenarios'>
+                  <tr *ngFor='let ts of scenariosList'>
                     <td>{{ts.date}}</td>
-                    <td>{{ts.scenarioName}}</td>
-                    <td>{{ts.coveragePeriod}}</td>
+                    <td>{{ts.name}}</td>
+                    <td>{{ts.coverageStartDate}} - {{ts.coverageEndDate}}</td>
                     <td>{{ts.comments}}</td>
                     <td>
                         <div class="d-flex align-items-center">

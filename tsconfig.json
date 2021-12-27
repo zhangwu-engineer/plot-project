@@ -3,6 +3,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "downlevelIteration": true,
+    "strictPropertyInitialization": false,
     "module": "es2020",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,

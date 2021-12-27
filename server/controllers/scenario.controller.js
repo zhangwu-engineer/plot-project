@@ -5,8 +5,11 @@ const getScenarios = (req, res) => {
   const page = req.query.page || 0;
   const search = req.query.search || '';
 
-  res.json(MOCK_DATA);
-
+  setTimeout(() => {
+  res.json({
+    count: MOCK_DATA.length,
+    data: MOCK_DATA
+  })}, 2000);
 };
 
 export {

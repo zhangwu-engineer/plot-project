@@ -5,6 +5,11 @@ import { HttpClient } from '@angular/common/http';
 import { Scenario } from './models/scenario';
 import { API_BASE_URL } from './config/api';
 
+interface ScenarioResponse {
+  data: Scenario[],
+  count: number,
+  totalPages: number,
+}
 @Injectable({ providedIn: 'root' })
 export class ScenarioService {
   public isLoading: boolean;
@@ -15,8 +20,8 @@ export class ScenarioService {
   ) {
   }
 
-  getAll() {
-    return this.http.get<{ data: Scenario[]}>(`${API_BASE_URL}/scenarios`);
+  getAll(pageNumber: number, pageSize = 10) {
+    return this.http.get<ScenarioResponse>(`${API_BASE_URL}/scenarios/?page=${pageNumber}&size=${pageSize}`);
   }
 
 }

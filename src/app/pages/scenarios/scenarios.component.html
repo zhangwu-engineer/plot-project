@@ -1,10 +1,10 @@
 <div class="row">
   <div class="col-12">
     <div class="card">
-      <div class="px-4 py-3 d-flex justify-content-between">
-        <h4 class="card-title text-dark mb-0">Scenarios</h4>
-        <div class="d-flex align-items-center">
-            <button class="btn btn-secondary text-white d-flex align-items-center me-2">
+      <div class="d-flex flex-wrap justify-content-between pt-3 px-4">
+        <h4 class="card-title text-dark mb-0 pb-3">Scenarios</h4>
+        <div class="d-flex align-items-center pb-3">
+            <button class="btn btn-secondary text-white d-flex align-items-center me-2" (click)="open(content)">
                 <i class="bi bi-download me-2"></i>
                 <span>Input Template</span>
             </button>
@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="card-body border-top">
-        <div class="w-100 text-center" *ngIf="this.scenarioService.isLoading">
+        <div class="w-100 p-4 text-center" *ngIf="this.scenarioService.isLoading">
             <div class="spinner-border text-primary align-items-center" role="status">
             </div>
         </div>
@@ -68,9 +68,48 @@
                     </td>
                   </tr>              
               </tbody>
-          </table>
-      </div>
+            </table>
+        </div>
+        <div class="w-100 d-flex justify-content-center pt-2">
+            <ngb-pagination
+                [(collectionSize)]="collectionSize"
+                [(page)]="page"
+                [maxSize]="5"
+                [boundaryLinks]="true"
+                (pageChange)="onChangePage($event)"
+            ></ngb-pagination>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+<!-- Modal -->
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Input Template</h4>
+      <button class="btn btn-link p-0" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+          <label for="dateOfBirth">Scenario Name</label>
+          <div class="input-group pt-1">
+            <input id="dateOfBirth" type="text" class="form-control" placeholder="Scenario Name">
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary text-white d-flex align-items-center" (click)="modal.close('Save click')">
+            <i class="bi bi-save me-2"></i>
+            <span>Save</span>
+        </button>
+        <button class="btn btn-light" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <i class="bi bi-x-lg me-2"></i>
+            <span>Cancel</span>
+        </button>
+    </div>
+</ng-template>

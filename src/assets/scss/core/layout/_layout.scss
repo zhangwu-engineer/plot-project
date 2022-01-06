@@ -16,8 +16,8 @@
 }
 
 .page-wrapper > .container-fluid {
-  padding: 20px;
-  min-height: calc(100vh - 118px);
+  padding-top: 30px;
+  min-height: calc(100vh - 105px);
   max-width: $page-wrapper-max-width;
   margin: 0 auto;
 }
@@ -27,8 +27,11 @@ Footer
 *******************/
 
 .footer {
-  padding: 15px 20px;
+  width: 100%;
+  z-index: 1000;
+  padding-bottom: 20px;
   font-size: $h6-font-size;
+  background: $body-bg;
 }
 
 /*******************

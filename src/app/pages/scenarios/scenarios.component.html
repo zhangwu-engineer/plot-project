@@ -4,11 +4,11 @@
       <div class="d-flex flex-wrap justify-content-between pt-3 px-4">
         <h4 class="card-title text-dark mb-0 pb-3">Scenarios</h4>
         <div class="d-flex align-items-center pb-3">
-            <button class="btn btn-secondary text-white d-flex align-items-center me-2" (click)="open(content)">
+            <button class="btn btn-secondary text-white d-flex align-items-center me-2">
                 <i class="bi bi-download me-2"></i>
                 <span>Input Template</span>
             </button>
-            <button class="btn btn-primary text-white d-flex align-items-center">
+            <button class="btn btn-primary text-white d-flex align-items-center" (click)="open(content)">
                 <i class="bi bi-plus-circle-fill me-2"></i>
                 <span>New Scenario</span>
             </button>
@@ -94,12 +94,18 @@
     </div>
     <div class="modal-body">
       <form>
-        <div class="form-group">
-          <label for="dateOfBirth">Scenario Name</label>
+        <div class="form-group pb-2">
+          <label for="scenarioName">Scenario Name</label>
           <div class="input-group pt-1">
-            <input id="dateOfBirth" type="text" class="form-control" placeholder="Scenario Name">
+            <input id="scenarioName" type="text" class="form-control" placeholder="Input scenario name">
           </div>
         </div>
+        <div class="form-group">
+            <label for="dateOfCreation">Date</label>
+            <div class="input-group pt-1">
+              <input id="dateOfCreation" type="text" class="form-control" placeholder="Pick date">
+            </div>
+          </div>
       </form>
     </div>
     <div class="modal-footer">

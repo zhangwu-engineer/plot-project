@@ -17,6 +17,15 @@ const getScenarios = (req, res) => {
   })}, 1000);
 };
 
+const addScenario = (req, res) => {
+  setTimeout((() => {
+    res.status(200).json({
+      status: "Ok",
+    });
+  }), 2000);
+}
+
 export {
   getScenarios,
+  addScenario,
 };

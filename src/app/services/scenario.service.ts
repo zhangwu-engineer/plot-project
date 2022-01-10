@@ -11,6 +11,11 @@ interface ScenarioResponse {
   totalPages: number,
 }
 
+interface NewScenarioResponse {
+  status: number,
+  message: string,
+}
+
 @Injectable({ providedIn: 'root' })
 export class ScenarioService {
   public isLoading: boolean;
@@ -26,7 +31,7 @@ export class ScenarioService {
   }
 
   addNew(request: FormData) {
-    return this.http.post<ScenarioResponse>(`${API_BASE_URL}/scenarios/`, request);
+    return this.http.post<NewScenarioResponse>(`${API_BASE_URL}/scenarios/`, request);
   }
 
 }

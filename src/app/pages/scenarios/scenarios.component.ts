@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgbModal, NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 import { StatusCollection, StatusList } from './scenarios.config';
 import { ScenarioService } from '../../services/scenario.service';
+import { ToastService } from '../../services/toast.service';
 import { Scenario } from '../../services/models/scenario';
 @Component({
   selector: 'app-scenarios',
@@ -21,7 +22,7 @@ export class ScenariosComponent implements OnInit  {
 
   public uploadedFiles: Array<File> = [];
 
-  constructor(public scenarioService: ScenarioService, private modalService: NgbModal) { 
+  constructor(public scenarioService: ScenarioService, private modalService: NgbModal, public toastService: ToastService) { 
     this.scenariosList = [];
     this.statusList = StatusList;
   }
@@ -64,13 +65,21 @@ export class ScenariosComponent implements OnInit  {
     this.scenarioService.addNew(formData)
       .subscribe(
         res => {
-          console.log(res);
+          this.toastService.show(res.message, {
+            classname: 'bg-success text-light',
+            delay: 3000,
+            autohide: true,
+          });
           this.scenarioService.isLoading = false;
           this.modalService.dismissAll();
         },
         error => {
           this.scenarioService.isLoading = false;
-          console.log('The request has been failed!');
+          this.toastService.show('The request has been failed!', {
+            classname: 'bg-danger text-light',
+            delay: 3000,
+            autohide: true,
+          });
         },
       );
   }

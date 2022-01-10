@@ -16,6 +16,7 @@ import { AuthLayoutComponent } from './layouts/auth/auth.component';
 
 import { NavigationComponent } from './shared/header/navigation.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { ToastComponent } from './component/toast/toast.component';
 
 import { Approutes } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -40,6 +41,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     AuthLayoutComponent,
     NavigationComponent,
     SidebarComponent,
+    ToastComponent,
   ],
   imports: [
     CommonModule,

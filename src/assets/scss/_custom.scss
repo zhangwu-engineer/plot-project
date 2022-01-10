@@ -5,8 +5,31 @@
   color: $secondary;
   transition: all .3s;
   &:hover {
-    color: $disabled;
     cursor: pointer;
+  }
+}
+
+.play-icon {
+  &:hover {
+    color: $success;
+  }
+}
+
+.log-icon {
+  &:hover {
+    color: $primary;
+  }
+}
+
+.download-icon {
+  &:hover {
+    color: $primary;
+  }
+}
+
+.delete-icon {
+  &:hover {
+    color: $danger;
   }
 }
 

@@ -75,3 +75,15 @@
 .table > :not(caption) > * > * {
   padding: 0.8rem;
 }
+
+// Toast
+
+.ngb-toasts {
+  position: fixed;
+  top: auto!important;
+  bottom: 0!important;
+  right: 0!important;
+  left: auto!important;
+  margin: 1rem;
+  z-index: 5000;
+}

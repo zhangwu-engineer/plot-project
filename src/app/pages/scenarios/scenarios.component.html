@@ -113,9 +113,9 @@
           </div>
         </div>
         <div class="form-group pb-2">
-          <label for="dateOfCreation">Comments</label>
+          <label for="newComment">Comments</label>
           <div class="input-group pt-1">
-            <textarea id="dateOfCreation" class="form-control" placeholder="Put comments" rows="5"></textarea>
+            <textarea name="newComment" [(ngModel)]="newComment" class="form-control" placeholder="Put comments" rows="5"></textarea>
           </div>
         </div>
     </div>
@@ -123,7 +123,7 @@
         <button
           class="btn btn-primary text-white d-flex align-items-center"
           type="submit"
-          [disabled]="!scenarioName || !model || uploadedFiles.length == 0"
+          [disabled]="!scenarioName || !model || uploadedFiles.length == 0 || scenarioService.isLoading"
         >
             <i class="bi bi-save me-2"></i>
             <span>Save</span>

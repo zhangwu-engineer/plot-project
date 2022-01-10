@@ -10,6 +10,7 @@ interface ScenarioResponse {
   count: number,
   totalPages: number,
 }
+
 @Injectable({ providedIn: 'root' })
 export class ScenarioService {
   public isLoading: boolean;
@@ -22,6 +23,10 @@ export class ScenarioService {
 
   getAll(pageNumber: number, pageSize = 10) {
     return this.http.get<ScenarioResponse>(`${API_BASE_URL}/scenarios/?page=${pageNumber}&size=${pageSize}`);
+  }
+
+  addNew(request: FormData) {
+    return this.http.post<ScenarioResponse>(`${API_BASE_URL}/scenarios/`, request);
   }
 
 }

@@ -21,6 +21,7 @@ const addScenario = (req, res) => {
   setTimeout((() => {
     res.status(200).json({
       status: "Ok",
+      message: "A new scenario has been added!"
     });
   }), 2000);
 }

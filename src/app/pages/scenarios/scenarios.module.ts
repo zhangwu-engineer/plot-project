@@ -3,6 +3,7 @@ import { CommonModule } from "@angular/common";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { Routes, RouterModule } from "@angular/router";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FileUploadModule } from '@iplab/ngx-file-upload';
 import { ScenariosComponent } from "./scenarios.component";
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
     ReactiveFormsModule,
     CommonModule,
     NgbModule,
+    FileUploadModule,
     RouterModule.forChild(routes),
   ],
   declarations: [

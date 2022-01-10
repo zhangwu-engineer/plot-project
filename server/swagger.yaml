@@ -48,7 +48,9 @@ definitions:
         example: "MRF"
       date:
         type: "string"
-      coveragePeriod:
+      coverageStartDate:
+        type: "string"
+      coverageEndDate:
         type: "string"
       comments:
         type: "string"

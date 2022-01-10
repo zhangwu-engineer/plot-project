@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, ModalDismissReasons, NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 import { StatusCollection, StatusList } from './scenarios.config';
 import { ScenarioService } from '../../services/scenario.service';
 import { Scenario } from '../../services/models/scenario';
@@ -15,6 +15,9 @@ export class ScenariosComponent implements OnInit  {
   pageSize: number;
   collectionSize: number;
   closeResult = '';
+  model: NgbDateStruct;
+
+  public uploadedFiles: Array<File> = [];
 
   constructor(public scenarioService: ScenarioService, private modalService: NgbModal) { 
     this.scenariosList = [];
@@ -36,6 +39,10 @@ export class ScenariosComponent implements OnInit  {
         this.scenarioService.isLoading = false;
         this.collectionSize = res.totalPages * 10;
       });
+  }
+
+  onSubmitNewScenario() {
+    
   }
 
   onChangePage(pageNumber: number) {
